@@ -1,0 +1,129 @@
+/* Light Mode */
+:root {
+    --background-light-primary: #e76f51;
+    --background-light-primary-var: #ed937d;
+    --background-light-secondary: #f4a261;
+    --background-light-tertiary: #ffffff;
+
+    --font-light-primary: #f0f0f0;
+    --font-light-secondary: #000000;
+
+    --highlight-light: #E9C46A;
+
+    --shadow-light-primary: #ffffff40;
+    --shadow-light-secondary: #ffffff40;
+}
+
+/* Dark Mode */
+:root {
+    --background-dark-primary: #480672;
+    --background-dark-primary-var: #852AC1;
+    --background-dark-secondary: #A379C9;
+    --background-dark-tertiary: #252525;
+
+    --font-dark-primary: #f0f0f0;
+    --font-dark-secondary: #f0f0f0;
+
+    --highlight-dark: #478978;
+
+    --shadow-dark-primary: #2C2C2C;
+    --shadow-dark-secondary: #FFFFFF40;
+}
+
+
+:root, :root.theme-light {
+    --background-primary: var(--background-light-primary);
+    --background-primary-var: var(--background-light-primary-var);
+    --background-secondary: var(--background-light-secondary);
+    --background-tertiary: var(--background-light-tertiary);
+
+    --font-primary: var(--font-light-primary);
+    --font-secondary: var(--font-light-secondary);
+
+    --highlight: var(--highlight-light);
+
+    --shadow-primary: var(--shadow-light-primary);
+    --shadow-secondary: var(--shadow-light-secondary);
+}
+
+:root, :root.theme-dark {
+    --background-primary: var(--background-dark-primary);
+    --background-primary-var: var(--background-dark-primary-var);
+    --background-secondary: var(--background-dark-secondary);
+    --background-tertiary: var(--background-dark-tertiary);
+
+    --font-primary: var(--font-dark-primary);
+    --font-secondary: var(--font-dark-secondary);
+
+    --highlight: var(--highlight-dark);
+
+    --shadow-primary: var(--shadow-dark-primary);
+    --shadow-secondary: var(--shadow-dark-secondary);
+}
+
+
+/* Font, margin and padding sizes */
+:root {
+    /* Fonts */
+    --font-huge: 120px;
+    --font-extra-large: 64px;
+    --font-large: 40px;
+    --font-medium: 32px;
+    --font-small: 20px;
+
+    /* Margins */
+    --margin-extra-large: 120px;
+    --margin-large: 80px;
+    --margin-medium: 30px;
+
+    /* Paddings */
+    --padding-extra-large: 100px;
+    --padding-large: 80px;
+    --padding-medium: 40px;
+}
+
+@media (max-width: 820px) {
+    :root {
+        /* Fonts */
+        --font-huge: 100px;
+        --font-extra-large: 55px;
+        --font-large: 35px;
+        --font-medium: 28px;
+        
+        /* Margins */
+        --margin-extra-large: 100px;
+        --margin-large: 50px;
+        --margin-medium: 20px;
+
+        /* Paddings */
+        --padding-extra-large: 80px;
+        --padding-large: 50px;
+        --padding-medium: 30px;
+    }
+}
+
+@media (max-width: 680px) {
+    :root {
+        /* Fonts */
+        --font-huge: 80px;
+        --font-small: 15px;
+        
+        /* Margins */
+        --margin-extra-large: 80px;
+        --margin-large: 20px;
+
+        /* Paddings */
+        --padding-extra-large: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        /* Fonts */
+        --font-huge: 64px;
+        
+        /* Margins */
+
+        /* Paddings */
+    }
+}

@@ -1,0 +1,62 @@
+{% liquid
+
+unless context.session.theme == "dark"
+
+assign graph_bg = 'images/graph.avif' | asset_url
+
+else
+
+assign graph_bg = 'images/graph_dark.avif' | asset_url
+
+endunless %}
+
+{% content_for 'styles' %}
+  <link rel="stylesheet" href="{{ 'styles/sections.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'styles/contact-us.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'styles/buttons.css' | asset_url }}">
+{% endcontent_for %}
+
+<section class="colored-section-2"> 
+    <h1>Contact Us</h1>
+
+    <p>If you feel like we got your interest and want to make your next website with us please fill out the form below.</p>
+</section>
+
+<section class="img-section">
+    <img src="{{ graph_bg }}" id="contactUsBg" />
+    <form class="contact-form">
+        <div class="input-block">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" required>
+        </div>
+
+        <div class="input-block">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" required>
+        </div>
+
+        <div class="input-block">
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail" required>
+        </div>
+
+        <div class="input-block">
+            <label for="tel">Phone</label>
+            <input type="tel" name="tel" id="tel" required>
+        </div>
+
+        <div class="input-block full-width">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" required>
+        </div>
+
+        <div class="input-block full-width">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="3" required></textarea>
+        </div>
+
+        <div class="input-block">
+            <button class="primary-btn" onclick="location.href='contact-us'">Send</button>
+        </div>
+    </form>
+</section>

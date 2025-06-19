@@ -1,0 +1,10 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 80px 20px 50px;
+  background: var(--background-primary);
+  color: var(--font-secondary);
+  font-size: var(--font-small);
+  font-weight: 400;
+}

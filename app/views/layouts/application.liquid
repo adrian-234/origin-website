@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="
+  {% if context.session.theme == "light" or context.session.theme == null %}
+    theme-light
+  {% else %}
+    theme-dark
+  {% endif %}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="authenticity_token" name="csrf-param">
+    <meta content="{{ form_authenticity_token }}" name="csrf-token">
+
+    <title>origin/develop</title>
+
+    <link rel="stylesheet" href="{{ 'styles/app.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'styles/config.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'styles/navbar.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'styles/footer.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'styles/theme-switcher.css' | asset_url }}">
+
+    {% yield "styles" %}
+
+    <style>
+      @font-face {
+        font-family: 'Manrope';
+        src: url('{{ 'fonts/Manrope-Bold.woff2' | asset_url }}') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Manrope';
+        src: url('{{ 'fonts/Manrope-SemiBold.woff2' | asset_url }}') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Manrope';
+        src: url('{{ 'fonts/Manrope-Regular.woff2' | asset_url }}') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Martian Mono';
+        src: url('{{ 'fonts/MartianMono-Bold.woff2' | asset_url }}') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Martian Mono';
+        src: url('{{ 'fonts/MartianMono-Regular.woff2' | asset_url }}') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% render "theme-switcher" %}
+
+    {% render "navbar" %}    
+
+    {{ content_for_layout }}
+
+    {% render "footer" %}
+
+    <script src="{{ "scripts/navbar.js" | asset_url}}"></script>
+    <script src="{{ "scripts/dark_mode.js" | asset_url}}"></script>
+
+    {% yield "scripts" %}
+  </body>
+</html>

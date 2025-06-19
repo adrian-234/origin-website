@@ -1,0 +1,58 @@
+.trackbar-navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: var(--background-secondary);
+  padding: 10px 5px;
+  border-radius: 30px;
+  z-index: 99;
+  interpolate-size: allow-keywords;
+}
+
+.trackbar-navbar a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    color: var(--font-primary);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.trackbar-navbar svg {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.trackbar-navbar a span {
+    width: 0px;
+    white-space: nowrap;
+    transition: .2s;
+}
+
+.trackbar-navbar a span::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    margin-top: -3px;
+    background: var(--font-primary);
+    display: block;
+    transition: .1s ease-out;
+}
+
+.trackbar-navbar:hover a {
+    gap: 10px;
+} 
+
+.trackbar-navbar:hover a span {
+    width: auto;
+}
+
+.trackbar-navbar a span:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+---
+slug: api/change
+method: post
+---
+{% liquid
+  assign current_theme = context.session.theme
+  if current_theme == blank or current_theme == 'dark'
+    session theme = "light"
+  else
+    session theme = "dark"
+  endif
+ assign theme_object = null | hash_merge: theme: context.session.theme
+echo theme_object
+%}

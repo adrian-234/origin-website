@@ -1,0 +1,56 @@
+{% content_for 'styles' %}
+  <link rel="stylesheet" href="{{ 'styles/index.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'styles/sections.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'styles/buttons.css' | asset_url }}">
+{% endcontent_for %}
+
+{% content_for 'scripts' %}
+  <script src="{{ 'scripts/phone-animation.js' | asset_url }}"></script>
+{% endcontent_for %}
+
+<section class="hero"> 
+    <img class="logo" src="{{'images/logo_big.avif' | asset_url}}" alt="origin/develop's logo" width=450 height=450>
+    <h1 class="main-title">origin<br><span>/develop</span></h1>
+</section>
+
+<section class="mono-section">
+    <h2>Why us?</h2>
+    <p>We are a software development company that designs, builds, and develops highly functional software products with automated DevOps — ready to take your business to the next level.</p>
+</section>
+
+<section class="colored-section projects">
+        <div class="project-text">
+            <h2>Project Name 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ornare libero, vel venenatis augue. Morbi non neque id arcu ultricies ullamcorper. Integer fermentum accumsan est quis suscipit. </p>
+        </div>
+        <picture class="phone revealed">
+            <img src="{{ 'images/logo_big.avif' | asset_url }}">
+        </picture>
+
+        <div class="project-text">
+            <h2>Project Name 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ornare libero, vel venenatis augue. Morbi non neque id arcu ultricies ullamcorper. Integer fermentum accumsan est quis suscipit. </p>
+        </div>
+        <picture class="phone">
+            <img src="{{ 'images/graph.avif' | asset_url }}">
+        </picture>
+
+        <div class="project-text">
+            <h2>Project Name 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ornare libero, vel venenatis augue. Morbi non neque id arcu ultricies ullamcorper. Integer fermentum accumsan est quis suscipit. </p>
+        </div>
+        <picture class="phone">
+            <img src="{{ 'images/graph_dark.avif' | asset_url }}">
+        </picture>
+</section>
+
+<section class="mono-section">
+    <div class="card-2piece">
+        <div>
+            <p>If you want to make your dream website with us:</p>
+        </div>
+        <div>
+            <button class="primary-btn" onclick="location.href='contact-us'">Contact Us</button>
+        </div>
+    </div>
+</section>
