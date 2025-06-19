@@ -103,10 +103,38 @@
   .card-2piece div:nth-child(2) {
     padding: 30px;
   }
+
+  .phone {
+    width: 300px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 820px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project-text {
+    height: fit-content;
+    margin: var(--margin-medium);
+  }
+
+  .phone {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+    margin: auto;
+  }
 }
 
 @media (max-width: 680px) {
   .main-title span {
     padding-left: 0px;
+  }
+
+  .phone {
+    width: 220px;
+    height: 381px;
   }
 }

@@ -33,10 +33,6 @@
   margin: 0px 0px 0px 20px;
 }
 
-.colored-section p {
-  margin-right: 100px;
-}
-
 .colored-section-2 {
   padding: 150px var(--margin-large) 100px;
   background: linear-gradient(140deg, var(--background-primary) 0%, var(--background-primary-var) 100%);
